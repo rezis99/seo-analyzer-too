@@ -175,6 +175,7 @@ def home():
     return jsonify({
         'message': 'SEO Analyzer Pro API',
         'status': 'running',
+        'version': '1.0',
         'endpoints': ['/api/analyze', '/api/download/<filename>']
     })
 
@@ -282,5 +283,7 @@ def download_file(filename):
         return jsonify({'error': f'Download failed: {str(e)}'}), 500
 
 if __name__ == '__main__':
+    import os
+    port = int(os.environ.get('PORT', 5000))
     print("Starting SEO Analyzer Pro...")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=port)
