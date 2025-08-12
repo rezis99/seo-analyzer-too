@@ -16,12 +16,15 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: #333;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
         }
         
         .header {
@@ -190,8 +193,9 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 60px;
+            margin-top: auto;
             position: relative;
+            width: 100%;
         }
 
         .footer-content {
@@ -268,7 +272,7 @@
                     type="url" 
                     id="sitemapUrl" 
                     placeholder="https://example.com/sitemap.xml"
-                    value="Enter your Sitemap here"
+                    value="https://example.com/sitemap.xml"
                 >
             </div>
             
@@ -466,4 +470,3 @@
     </script>
 </body>
 </html>
-
